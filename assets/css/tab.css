@@ -1,0 +1,54 @@
+/* for Publications tabs */
+.publicationsTabWrapper
+{
+  overflow: hidden;
+}
+.publicationsTabsSection
+{
+  margin: -1px;
+}
+.tabsContainer
+{
+  margin-top: 30px;
+}
+.custom-nav-tabs {
+  justify-content: center;
+}
+.custom-nav-tabs li
+{
+  padding: 0 10px;
+  margin-top: 5px;
+}
+.tabsContainer .nav-tabs {
+  border-bottom: none !important;
+}
+.custom-nav-tabs .nav-item {
+  margin-bottom: -1px;
+}
+
+.custom-nav-tabs .nav-link {
+  border: 1px solid transparent;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  color: #555;
+  background-color: #f8f9fa;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+}
+
+.custom-nav-tabs .nav-link:hover {
+  background-color: #e9ecef;
+  border-color: #ddd #ddd #fff;
+}
+
+.custom-nav-tabs .nav-link.active {
+  color: #fff;
+  background-color: var(--primaryColor);
+  border-color: var(--primaryColor) var(--primaryColor) #fff;
+  border-bottom: 2px solid var(--primaryColor);
+}
+
+.tab-content.careerContent {
+  border: 1px solid #ddd;
+  border-top: none;
+}
