@@ -1,13 +1,13 @@
 // document.addEventListener("DOMContentLoaded", function() {
 //     const accordionItems = document.querySelectorAll(".accordion-item");
-  
+
 //     accordionItems.forEach(item => {
 //       const title = item.querySelector(".accordion-title");
 //       title.addEventListener("click", () => {
 //         const content = item.querySelector(".accordion-content");
 //         const icon = title.querySelector("i");
 //         const isOpen = content.style.display === "block";
-  
+
 //         // Close all other accordion contents and reset icons
 //         document.querySelectorAll(".accordion-content").forEach(content => {
 //           content.style.display = "none";
@@ -15,7 +15,7 @@
 //         document.querySelectorAll(".accordion-title i").forEach(icon => {
 //           icon.style.transform = "rotate(0deg)";
 //         });
-  
+
 //         // Open the clicked accordion item and rotate the icon
 //         if (!isOpen) {
 //           content.style.display = "block";
@@ -99,42 +99,109 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// citaitons
-const counters = document.querySelectorAll(".metric-counter");
+// counter
 
-counters.forEach(counter => {
-  counter.innerText = "0";
 
-  const updateCounter = () => {
-    const target = +counter.getAttribute("data-target");
-    const c = +counter.innerText;
+document.addEventListener('DOMContentLoaded', () => {
+  const counters = document.querySelectorAll('.counter');
 
-    const totalDuration = 2000; // Total duration for all counters to complete in milliseconds
-    let increment;
-    let delay;
+  counters.forEach(counter => {
+    const target = +counter.getAttribute('data-target');
+    const valueElement = counter.querySelector('.counter-value');
 
-    if (target < 50) {
-      increment = 1;
-      delay = totalDuration / target; // Calculate delay based on target and total duration
-    } else {
-      increment = target / (totalDuration / 20); // Calculate increment based on target and total duration
-      delay = 20; // Normal delay for higher values
-    }
+    let count = 0;
+    const speed = 50; // Change this value to control the speed of the animation
 
-    if (c < target) {
-      counter.innerText = `${Math.ceil(c + increment)}`;
-      setTimeout(updateCounter, delay);
-    } else {
-      counter.innerText = target;
-    }
-  };
+    const updateCounter = () => {
+      if (count < target) {
+        count++;
+        valueElement.textContent = count;
+        setTimeout(updateCounter, speed);
+      } else {
+        valueElement.textContent = target;
+      }
+    };
 
-  updateCounter();
+    updateCounter();
+  });
 });
 
 
+// sponsored by section
+const swiper = new Swiper('.sponsorCarousel', {
+  loop: true,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true, // Pause autoplay when hovering over the slider
+  },
+  breakpoints: {
+    0: {   // For small screens (e.g. mobile)
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    600: { // For medium screens (e.g. tablets)
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1000: { // For large screens (e.g. desktops)
+      slidesPerView: 4,
+      spaceBetween: 30,
+    }
+  }
+});
+
+// media partner carousel
+const mediaPartnerCarousel = new Swiper('.mediaPartnerCarousel', {
+  loop: true,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true, // Pause autoplay when hovering over the slider
+    reverseDirection: true, // Play in reverse
+  },
+  breakpoints: {
+    0: {   // For small screens (e.g. mobile)
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    600: { // For medium screens (e.g. tablets)
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1000: { // For large screens (e.g. desktops)
+      slidesPerView: 4,
+      spaceBetween: 30,
+    }
+  }
+});
 
 
-
-
+// committe section
+const committeCarousel = new Swiper('.committeCarousel', {
+  loop: true, // Enable looping
+  autoplay: {
+    delay: 3000, // 3-second delay between slides
+    disableOnInteraction: false, // Keep autoplay active after user interaction
+    pauseOnMouseEnter: true,
+  },
+  pagination: {
+    el: '.swiper-pagination', // Element for pagination
+    clickable: true, // Allow users to click on pagination bullets
+  },
+  breakpoints: {
+    0: { // Small screens
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    800: { // Medium screens
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1000: { // Large screens
+      slidesPerView: 4,
+      spaceBetween: 30,
+    }
+  }
+});
 

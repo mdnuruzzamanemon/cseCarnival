@@ -13,15 +13,21 @@
     href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;500;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Avenir+LT+Std:wght@400&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="./assets/css/animate.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
 
 
 
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/tab.css">
+  <link rel="stylesheet" href="assets/css/counter.css">
 
 
 </head>
@@ -48,7 +54,7 @@
             <li class="nav-item"><a class="nav-link" href="./#about">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="./Education.html">Events</a></li>
             <li class="nav-item"><a class="nav-link" href="./Employment.html">Committee</a></li>
-            <li class="nav-item"><a class="nav-link" href="./teaching&supervision.html">Registration</a>
+            <li class="nav-item"><a class="nav-link" href="./teaching&supervision.html">Volunteers</a>
             </li>
 
             <!-- <li class="nav-item dropdownMenu"><a class="nav-link" href="./Book&Chapter.html">Publications <i
@@ -85,7 +91,9 @@
       <div class="container headerContentMid">
         <div class="counterContentWrapper">
           <h1>CSE Carniavl 2024 GUB</h1>
-          <img src="./assets/images/logo.svg" alt="">
+          <!-- <img src="./assets/images/logo.svg" alt=""> -->
+          <dotlottie-player src="https://lottie.host/a329f91b-6e36-4b21-9d71-b52a7130a207/HkHGUpqKkY.json"
+            background="transparent" speed="1" style="width: 200px; height: 200px;" loop autoplay></dotlottie-player>
           <div class="counterBoxWrapper">
             <div class="counterBox">
               <span>33</span>
@@ -113,13 +121,23 @@
 
   <!-- about carnival start from here -->
   <div class="about">
+    <!-- for common tittle -->
+    <div class="outer">
+      <div class="left"></div>
+      <div class="right"></div>
+      <span>About CSE Carnival</span>
+    </div>
     <div class="container aboutBoxMid">
+      
       <div class="aboutCOntent">
-        <p class="sectionTitle">
-          <span><i class="fa-solid fa-circle-info"></i></span>
-          Learn about CSE Carnival
-        </p>
-        <h1>About CSE Carnival of GUB</h1>
+        <!-- <div>
+          <p class="sectionTitle">
+            <span><i class="fa-solid fa-circle-info"></i></span>
+            Learn about CSE Carnival
+          </p>
+          <h1>About CSE Carnival of GUB</h1>
+        </div> -->
+
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque eaque excepturi totam nulla obcaecati
           voluptate consequuntur, blanditiis cum? Odio earum eum unde neque recusandae numquam excepturi sed. Inventore
           praesentium eaque molestias labore nostrum, nisi alias tempore magni laborum, illo earum! Saepe voluptatibus
@@ -136,7 +154,9 @@
         </div>
       </div>
       <div class="aboutImg">
-        <img src="./assets/images/cseCarnivalImg2.jpeg" alt="">
+        <!-- <img src="./assets/images/cseCarnivalImg2.jpeg" alt=""> -->
+        <dotlottie-player src="https://lottie.host/540661d5-5492-4d68-b4a2-30735affa5d0/QRffyp47ST.json"
+          background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
       </div>
     </div>
   </div>
@@ -146,31 +166,38 @@
 
   <div class="programSchedule">
     <div class="container">
-      <p class="sectionTitle">
+
+      <!-- for common tittle -->
+      <div class="outer">
+        <div class="left"></div>
+        <div class="right"></div>
+        <span>Programe Schedule</span>
+      </div>
+      <!-- <p class="sectionTitle">
         <span><i class="fa-solid fa-calendar-days"></i></span>
         Learn about CSE Carnival
       </p>
-      <h1>Programe Schedule</h1>
+      <h1>Programe Schedule</h1> -->
 
       <!-- Nav tabs -->
-      <ul class="nav nav-tabs" id="eventTab" role="tablist">
+      <ul class="nav nav-tabs tabBtnList" id="eventTab" role="tablist">
         <li class="nav-item">
-          <a class="nav-link active tabBtn tabBtn1" id="day1-tab" data-toggle="tab" href="#day1" role="tab" aria-controls="day1"
-            aria-selected="true">
+          <a class="nav-link active tabBtn tabBtn1" id="day1-tab" data-toggle="tab" href="#day1" role="tab"
+            aria-controls="day1" aria-selected="true">
             <h3>Day 1</h3>
             <p>02.10.2024 || Wednesday</p>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link tabBtn tabBtn2" id="day2-tab" data-toggle="tab" href="#day2" role="tab" aria-controls="day2"
-            aria-selected="false">
+          <a class="nav-link tabBtn tabBtn2" id="day2-tab" data-toggle="tab" href="#day2" role="tab"
+            aria-controls="day2" aria-selected="false">
             <h3>Day 2</h3>
             <p>03.10.2024 || Thursday</p>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link tabBtn tabBtn3" id="day3-tab" data-toggle="tab" href="#day3" role="tab" aria-controls="day3"
-            aria-selected="false">
+          <a class="nav-link tabBtn tabBtn3" id="day3-tab" data-toggle="tab" href="#day3" role="tab"
+            aria-controls="day3" aria-selected="false">
             <h3>Day 3</h3>
             <p>04.10.2024 || Friday</p>
           </a>
@@ -180,74 +207,253 @@
       <!-- Tab panes -->
       <div class="tab-content eventContent">
         <div class="tab-pane fade show active" id="day1" role="tabpanel" aria-labelledby="day1-tab">
-          <ul class="tabContentList">
+          <ul class="tabContentList tabContentList1">
             <li>
-              <span class="time">09:30 AM - 11:00 AM</span>
-              <i class="fa-solid fa-gavel"></i> Inauguration Ceremony
+              <div class="time">09:30 AM - 11:00 AM</div>
+              <div class="eventTitle">
+                <span><i class="fa-solid fa-gavel"></i></span> Inauguration Ceremony
+              </div>
             </li>
             <li>
-              <span class="time">11:00 AM - 12:00 PM</span>
-              <i class="fa-solid fa-lightbulb"></i> Idea Showcasing
+              <div class="time">11:00 AM - 12:00 PM</div>
+              <div class="eventTitle">
+                <span><i class="fa-solid fa-lightbulb"></i></span> Idea Showcasing
+              </div>
             </li>
             <li>
-              <span class="time">11:00 AM - 12:30 PM</span>
-              <i class="fa-solid fa-star"></i> Talent Hunt
+              <div class="time">11:00 AM - 12:30 PM</div>
+              <div class="eventTitle">
+                <span><i class="fa-solid fa-star"></i></span> Talent Hunt
+              </div>
             </li>
             <li>
-              <span class="time">01:30 PM - 03:30 PM</span>
-              <i class="fa-solid fa-shield"></i> Technical Talk - Cyber Security
+              <div class="time">01:30 PM - 03:30 PM</div>
+              <div class="eventTitle">
+                <span><i class="fa-solid fa-shield"></i></span> Technical Talk - Cyber Security
+              </div>
             </li>
             <li>
-              <span class="time">01:30 PM - 04:00 PM</span>
-              <i class="fa-solid fa-code"></i> Inter Department Programming Contest
+              <div class="time">01:30 PM - 04:00 PM</div>
+              <div class="eventTitle">
+                <span><i class="fa-solid fa-code"></i></span> Inter Department Programming Contest
+              </div>
             </li>
           </ul>
         </div>
         <div class="tab-pane fade" id="day2" role="tabpanel" aria-labelledby="day2-tab">
-          <ul class="tabContentList">
-            
+          <ul class="tabContentList tabContentList2">
             <li>
-              <span class="time">09:30 AM - 12:30 PM</span>
-              <i class="fa-solid fa-gamepad"></i> CSE Gaming Battle
+              <div class="time">09:30 AM - 12:30 PM</div>
+              <div class="eventTitle">
+                <span><i class="fa-solid fa-gamepad"></i></span> CSE Gaming Battle
+              </div>
             </li>
             <li>
-              <span class="time">01:30 PM - 04:00 PM</span>
-              <i class="fa-solid fa-comments"></i> Tech-based Debate Contest
+              <div class="time">01:30 PM - 04:00 PM</div>
+              <div class="eventTitle">
+                <span><i class="fa-solid fa-comments"></i></span> Tech-based Debate Contest
+              </div>
             </li>
             <li>
-              <span class="time">01:30 PM - 04:00 PM</span>
-              <i class="fa-solid fa-seminar"></i> Seminar on “Path to Become a Successful Software Developer”
+              <div class="time">01:30 PM - 04:00 PM</div>
+              <div class="eventTitle">
+                <span><i class="fa-solid fa-chalkboard-teacher"></i></span> Seminar on “Path to Become a Successful
+                Software
+                Developer”
+              </div>
             </li>
           </ul>
         </div>
         <div class="tab-pane fade" id="day3" role="tabpanel" aria-labelledby="day3-tab">
-          <ul class="tabContentList">
+          <ul class="tabContentList tabContentList3">
             <li>
-              <span class="time">10:00 AM - 11:00 AM</span>
-              <i class="fa-solid fa-brain"></i> Battle of Neurons
+              <div class="time">10:00 AM - 11:00 AM</div>
+              <div class="eventTitle">
+                <span><i class="fa-solid fa-brain"></i></span> Battle of Neurons
+              </div>
             </li>
             <li>
-              <span class="time">11:00 AM - 01:00 PM</span>
-              <i class="fa-solid fa-users-cog"></i> Panel Discussion on “How Industry-Academia Collaboration Could
-              Benefit CSE Graduates in 2024”
+              <div class="time">11:00 AM - 01:00 PM</div>
+              <div class="eventTitle">
+                <span><i class="fa-solid fa-users-cog"></i></span> Panel Discussion on “How Industry-Academia
+                Collaboration Could Benefit CSE Graduates in 2024”
+              </div>
             </li>
             <li>
-              <span class="time">02:00 PM - 03:30 PM</span>
-              <i class="fa-solid fa-robot"></i> Workshop on Revolution of Robotics Technology and AI Related Technical
-              Talk
+              <div class="time">02:00 PM - 03:30 PM</div>
+              <div class="eventTitle">
+                <span><i class="fa-solid fa-robot"></i></span> Workshop on Revolution of Robotics Technology and AI
+                Related Technical Talk
+              </div>
             </li>
             <li>
-              <span class="time">03:30 PM - 07:30 PM</span>
-              <i class="fa-solid fa-trophy"></i> Prize Giving, Closing Ceremony & Cultural Event
-              
+              <div class="time">03:30 PM - 07:30 PM</div>
+              <div class="eventTitle">
+                <span><i class="fa-solid fa-trophy"></i></span> Prize Giving, Closing Ceremony & Cultural Event
+              </div>
             </li>
           </ul>
         </div>
       </div>
 
 
+
+
     </div>
   </div>
+
+
+  <!-- counter section -->
+  <div class="eventRegCounterBox">
+    <div class="container">
+
+      <!-- for common tittle -->
+      <div class="outer">
+        <div class="left"></div>
+        <div class="right"></div>
+        <span>Events and Registration</span>
+      </div>
+
+      <!-- <p class="sectionTitle">
+        <span><i class="fa-solid fa-face-laugh-wink"></i></span>
+        Look at the rigtration number
+      </p>
+      <h1>Number of events and registration</h1> -->
+
+      <div class="row">
+        <div class="col-md-4 col-sm-6">
+          <div class="counter green" data-target="42">
+            <div class="counter-icon">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <span class="counter-value">0</span>
+            <h3>Registration</h3>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="counter pink" data-target="12">
+            <div class="counter-icon">
+              <i class="fa-solid fa-calendar-check"></i>
+            </div>
+            <span class="counter-value">0</span>
+            <h3>Events</h3>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="counter orange" data-target="6">
+            <div class="counter-icon">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <span class="counter-value">0</span>
+            <h3>Commitees</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- organized by section -->
+  <div class="organizedBy">
+    <div class="container">
+
+      <!-- for common tittle -->
+      <div class="outer">
+        <div class="left"></div>
+        <div class="right"></div>
+        <span>Organized by</span>
+      </div>
+
+      <!-- <p class="sectionTitle">
+        <span><i class="fa-solid fa-address-card"></i>
+        </span>
+        Learn about who organize
+      </p>
+      <h1>Organized by</h1> -->
+
+      <div class="organizedByBox">
+        <ul>
+          <li><img src="./assets/images/organizedBy/gucc.png" alt=""></li>
+          <li><img src="./assets/images/organizedBy/A.png" alt=""></li>
+          <li><img src="./assets/images/organizedBy/BASIS logo.png" alt=""></li>
+          <li><img src="./assets/images/organizedBy/Website Development Committee.png" alt=""></li>
+          <li><img src="./assets/images/organizedBy/Central Coordination Committee.png" alt=""></li>
+          <li><img src="./assets/images/organizedBy/Cultural Event Committee.png" alt=""></li>
+          <li><img src="./assets/images/organizedBy/Graphic Design and Multimedia Committee.png" alt=""></li>
+          <li><img src="./assets/images/organizedBy/IEEE CS.png" alt=""></li>
+          <li><img src="./assets/images/organizedBy/Publication and Outreach Committee.png" alt=""></li>
+          <li><img src="./assets/images/organizedBy/Sponsorship Management Committee.png" alt=""></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- sponsored by section -->
+  <!-- Swiper -->
+  <div class="container caroMid">
+
+    <!-- for common tittle -->
+    <div class="outer">
+      <div class="left"></div>
+      <div class="right"></div>
+      <span>Sponsored by</span>
+    </div>
+
+
+    <!-- <p class="sectionTitle">
+      <span><i class="fa-solid fa-address-card"></i>
+      </span>
+      Learn about who organize
+    </p>
+    <h1>Sponsored by</h1> -->
+
+    <div class="swiper sponsorCarousel">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="./assets/images/organizedBy/A.png" alt="Logo 1"></div>
+          <div class="swiper-slide"><img src="./assets/images/organizedBy/BASIS logo.png" alt="Logo 2"></div>
+          <div class="swiper-slide"><img src="./assets/images/organizedBy/Central Coordination Committee.png"
+              alt="Logo 3"></div>
+          <div class="swiper-slide"><img src="./assets/images/organizedBy/Website Development Committee.png"
+              alt="Logo 4"></div>
+          <div class="swiper-slide"><img src="./assets/images/organizedBy/gucc.png" alt="Logo 5"></div>
+        </div>
+    </div>
+  </div>
+
+  <!-- media partner section -->
+  <!-- Swiper -->
+  <div class="container caroMid">
+
+    <!-- for common tittle -->
+    <div class="outer">
+      <div class="left"></div>
+      <div class="right"></div>
+      <span>Media partner</span>
+    </div>
+
+    <!-- <p class="sectionTitle">
+      <span><i class="fa-solid fa-address-card"></i>
+      </span>
+      Learn about who organize
+    </p>
+    <h1>Media partner</h1> -->
+
+    <div class="swiper">
+      <div class="mediaPartnerCarousel">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="./assets/images/organizedBy/A.png" alt="Logo 1"></div>
+          <div class="swiper-slide"><img src="./assets/images/organizedBy/BASIS logo.png" alt="Logo 2"></div>
+          <div class="swiper-slide"><img src="./assets/images/organizedBy/Central Coordination Committee.png"
+              alt="Logo 3"></div>
+          <div class="swiper-slide"><img src="./assets/images/organizedBy/Website Development Committee.png"
+              alt="Logo 4"></div>
+          <div class="swiper-slide"><img src="./assets/images/organizedBy/gucc.png" alt="Logo 5"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 
 
@@ -263,6 +469,8 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="./assets/js/wow.min.js"></script>
   <script>
     new WOW().init();

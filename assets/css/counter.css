@@ -1,0 +1,94 @@
+:root { 
+    --color1: #489a4e; 
+    --color2: #fbce46;
+}
+
+.counter {
+    color: var(--color1);
+    background: linear-gradient(to top, var(--color1), var(--color2));
+    font-family: "Rajdhani", sans-serif;
+    text-align: center;
+    width: 200px;
+    padding: 55px 12px 0;
+    border-radius: 20px 20px;
+    position: relative;
+    margin: 50px auto 0;
+    z-index: 1;
+}
+.counter:before {
+    content: "";
+    background: #fff;
+    width: calc(100% - 30px);
+    height: calc(100% + 15px);
+    border-radius: 10px 10px;
+    transform: translateX(-50%) translateY(-50%);    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: -1;
+}
+.counter .counter-value {
+    font-size: 30px;
+    font-weight: 600;
+}
+.counter .counter-icon {
+    color: #fff;
+    background: linear-gradient(to top left, var(--color1), var(--color2));
+    font-size: 35px;
+    font-weight: 600;
+    width: 80px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 10px 0 10px 10px;
+    transform: translateX(-50%);
+    position: absolute;
+    top: -20px;
+    left: 50%;
+}
+.counter .counter-icon:before {
+    content: "";
+    background: linear-gradient(45deg, #2f6833 49%, transparent 50%);
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 0;
+    right: -12px;
+}
+.counter h3 {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin: 0 0 10px;
+}
+.counter.pink { 
+    --color1: #dd3e71; 
+    --color2: #974686; 
+}
+.counter.pink .counter-icon:before { 
+    background: linear-gradient(45deg, #9a1b43 49%, transparent 50%); 
+}
+.counter.green { 
+    --color1: #0eae57; 
+    --color2: #0c7475; 
+}
+.counter.green .counter-icon:before { 
+    background: linear-gradient(45deg, #076832 49%, transparent 50%); 
+}
+.counter.orange { 
+    --color1: #f75700; 
+    --color2: #f90000; 
+}
+.counter.orange .counter-icon:before { 
+    background: linear-gradient(45deg, #672502 49%, transparent 50%); 
+}
+@media screen and (max-width: 990px) {
+    .counter { 
+        margin-bottom: 80px; 
+    }
+}
+
+.eventRegCounterBox
+{
+    padding: 70px 0;
+}

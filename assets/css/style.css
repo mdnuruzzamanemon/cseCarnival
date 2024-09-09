@@ -1,5 +1,5 @@
 :root {
-  --primaryColor: #163853;
+  --primaryColor: #5a006e;
   --secondaryColor: rgb(0, 138, 202);
   --textColor: #1f1f1f;
   --greenColor: #117D3D;
@@ -13,7 +13,7 @@
 }
 
 body {
-  font-family: "AvenirLTStdRoman", Helvetica, "Roboto", Arial, sans-serif;
+  font-family: "Roboto", monospace;
 }
 
 .navBar {
@@ -296,10 +296,10 @@ body {
 {
   font-size: 20px;
 }
-.counterContentWrapper img
+/* .counterContentWrapper img
 {
   max-width: 200px;
-}
+} */
 .counterBoxWrapper
 {
   display: flex;
@@ -316,6 +316,10 @@ body {
   display: block;
   padding: 20px;
   font-size: 30px;
+  
+}
+.counterBox:nth-child(1) span
+{
   background-image: linear-gradient(45deg, #ff006a, #FF12E1);
 }
 .counterBox:nth-child(2) span
@@ -324,8 +328,13 @@ body {
 }
 .counterBox:nth-child(3) span
 {
-  background-image: linear-gradient(45deg, #ffa116, #e27100);
+  background-image: linear-gradient(45deg, #FF5722, #FF9800);
 }
+.counterBox:nth-child(4) span
+{
+  background-image: linear-gradient(45deg, #009688, #4CAF50);
+}
+
 
 /* about carnival */
 .about
@@ -334,7 +343,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
-  /* padding: 20px 0; */
+  padding: 20px 0;
 }
 .aboutBoxMid
 {
@@ -371,6 +380,10 @@ body {
 }
 
 /* programe schedule start here */
+.programSchedule .tabBtnList
+{
+  justify-content: space-between;
+}
 .programSchedule .tabContentList
 {
   list-style: none;
@@ -379,24 +392,88 @@ body {
 }
 .programSchedule .tabContentList li
 {
-  border: 1px solid var(--greenColor);
-  margin: 10px 0;
+  border-radius: 4px;
+  margin: 25px 0;
+  display: flex;
+  align-items: center;
+  transition: .3s;
+}
+.programSchedule .tabContentList li:hover
+{
+  transform: scale(1.01);
+}
+.programSchedule .tabContentList li .eventTitle
+{
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+.programSchedule .tabContentList li .eventTitle span
+{
+  background-color: #ff006a;
+  color: var(--lightColor);
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+.programSchedule .tabContentList1 li
+{
+  border: 1px solid #FF5722;
+}
+.programSchedule .tabContentList1 li .eventTitle span
+{
+  background-color: #FF5722;
+}
+.programSchedule .tabContentList2 li
+{
+  border: 1px solid #3d3dc2;
+}
+.programSchedule .tabContentList2 li .eventTitle span
+{
+  background-color: #3d3dc2;
+}
+.programSchedule .tabContentList3 li
+{
+  border: 1px solid #009688;
+}
+.programSchedule .tabContentList3 li .eventTitle span
+{
+  background-color: #009688;
 }
 .programSchedule .tabContentList li .time
 {
   display: inline-block;
-  padding: 10px 20px;
-  background-color: var(--greenColor);
+  padding: 25px 20px;
+  color: var(--lightColor);
+}
+.programSchedule .tabContentList1 li .time
+{
+  background-image: linear-gradient(45deg, #FF5722, #FF9800);
+}
+.programSchedule .tabContentList2 li .time
+{
+  background-image: linear-gradient(45deg, #3d3dc2, #a321b9);
+}
+.programSchedule .tabContentList3 li .time
+{
+  background-image: linear-gradient(45deg, #009688, #4CAF50);
 }
 .tabBtn
 {
   text-align: center;
   color: var(--lightColor);
   position: relative;
+  /* margin-right: 20px; */
+  padding: 10px 70px;
 }
 .tabBtn1
 {
-  background-image: linear-gradient(45deg, #ff006a, #FF12E1);
+  background-image: linear-gradient(45deg, #FF5722, #FF9800);
 }
 .tabBtn2
 {
@@ -404,7 +481,7 @@ body {
 }
 .tabBtn3
 {
-  background-image: linear-gradient(45deg, #ffa116, #e27100);
+  background-image: linear-gradient(45deg, #009688, #4CAF50);
 }
 .nav-tabs .nav-link.active::before {
   position: absolute;
@@ -416,25 +493,367 @@ body {
   transform: rotate(45deg);
 }
 .tabBtn1.active::before {
-  background-color: #ff006a;
+  background-color: #FF5722;
 }
 
 .tabBtn2.active::before {
   background-color: #3d3dc2;
   
 }
-.tabBtn2.active
+.tabBtn:hover
 {
-  color: #ff006a !important;
+  color: var(--lightColor);
+}
+.tabBtn.active
+{
+  color: var(--lightColor) !important;
 }
 .tabBtn3.active::before {
-  background-color: #ffa116;
+  background-color: #009688;
+}
+
+/* organized by section */
+.organizedBy .organizedByBox
+{
+  padding: 50px 0;
+}
+.organizedBy .organizedByBox ul
+{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.organizedBy .organizedByBox ul li img
+{
+  width: 150px;
 }
 
 
+/* notice section */
+.notice {
+  overflow: hidden;
+  
+  position: relative;
+  animation: fadeIn 2s ease-in-out;
+  z-index: 1;
+}
+
+.noticeList {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.noticeItem {
+  background: #fff;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.noticeItem::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  
+  background: var(--primaryColor);
+  transition: height 0.3s ease;
+}
+
+.noticeItem:hover::before {
+  height: 100%;
+  z-index: -1;
+}
+
+.noticeItem:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+.noticeItem:hover h5
+{
+  color: var(--lightColor);
+}
+.noticeItem:hover i {
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+.noticeItem:hover p
+{
+  color: var(--lightColor);
+}
+.noticeItem h5 {
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+  color: #777;
+  transition: color 0.3s ease;
+}
+
+.noticeItem i {
+  margin-right: 15px;
+  font-size: 1.5em;
+  color: var(--primaryColor);
+  transition: transform 0.3s ease;
+}
+.noticeItem p
+{
+  margin-top: 5px;
+  margin-bottom: 0px !important;
+  color: #777;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .noticeItem h5 {
+    font-size: 1em;
+  }
+
+  .noticeItem i {
+    font-size: 1.2em;
+  }
+}
 
 
+/* sponsored by section */
 
+.caroMid
+{
+  overflow: hidden;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.swiper-slide img {
+  width: 150px;
+  height: 100px;
+  object-fit: contain;
+}
+
+/* events section */
+.events .eventsBox
+{
+  position: relative;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 30px;
+}
+.events .eventsBox img
+{
+  max-width: 100%;
+  height: auto;
+}
+.eventsBox .eventsDetails
+{
+  background: rgba(6, 12, 34, 0.76);
+  position: absolute;
+  left: 0;
+  bottom: -60px;
+  right: 0;
+  text-align: center;
+  padding-top: 10px;
+  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  color: var(--lightColor);
+  padding: 0 5px;
+}
+.eventsBox .eventsDetails h4
+{
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.events .eventsBox:hover .eventsDetails
+{
+  bottom: 0;
+}
+
+/* common title css  */
+
+.outer{
+  width:fit-content;
+  padding: 10px 50px;
+  height: 50px;
+  background-color: #5a006e;
+  text-align:center;
+  margin:50px auto;
+  position:relative;
+  box-sizing:border-box;
+  font-family: arial;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+}
+.outer:before{
+  position:absolute;
+  content:'';
+  left:-25px;
+  top:25px;
+  border-top:25px solid transparent;
+  border-right:25px solid #333;
+  border-bottom:25px solid transparent;
+  border-left:25px solid transparent;
+  z-index:-1;
+}
+.outer:after{
+  position:absolute;
+  content:'';
+  right:-25px;
+  top:25px;
+  border-top:25px solid transparent;
+  border-right:25px solid transparent;
+  border-bottom:25px solid transparent;
+  border-left:25px solid #333;
+  z-index:-1;
+}
+.left{
+  position:absolute;
+  border-top:25px solid #8b5597;
+  border-right:50px solid #8b5597;
+  border-bottom:25px solid #8b5597;
+  border-left:25px solid transparent;
+  top:25px;
+  left:-50px;
+  z-index:-2;
+}
+.right{
+  position:absolute;
+  border-top:25px solid #8b5597;
+  border-right:25px solid transparent;
+  border-bottom:25px solid #8b5597;
+  border-left:50px solid #8b5597;
+  top:25px;
+  right:-50px;
+  z-index:-2;
+}
+
+.outer span{
+  display:block;
+  line-height:50px;
+  height:50px;
+  font-weight:bold;
+  font-size:28px;
+  font-family:arial;
+  color:var(--lightColor);
+  text-transform:uppercase;
+}
+
+
+/* committe section */
+
+
+.committeCarousel {
+  width: 100%;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.committeCard {
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.committeCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+.committeCard::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--primaryColor);
+  transition: height 0.3s ease;
+}
+
+.committeCard:hover::before {
+  height: 100%;
+}
+.committeCard:hover .committeCardContent h4,
+.committeCard:hover .committeCardContent p,
+.committeCard:hover .social-links a{
+  color: var(--lightColor);
+}
+.committeCardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+.committeCardContent img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.committeCardContent h4 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.committeCardContent p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.committeCardContent .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.committeCardContent .social-links a {
+  font-size: 18px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.committeCardContent .social-links a:hover {
+  color: var(--grayColor);
+}
 
 
 
