@@ -205,3 +205,28 @@ const committeCarousel = new Swiper('.committeCarousel', {
   }
 });
 
+
+// for sponsor packages
+
+const sponsoreCarousel = new Swiper('.sponsoreCarousel', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  autoplay: {
+    delay: 3000, // 3-second delay between slides
+    disableOnInteraction: false, // Keep autoplay active after user interaction
+    pauseOnMouseEnter: true,
+  },
+  breakpoints: {
+    600: {
+      slidesPerView: 2,
+    },
+    1000: {
+      slidesPerView: 3,
+    },
+  },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  loop: true,
+});
